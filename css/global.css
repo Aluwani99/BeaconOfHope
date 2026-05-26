@@ -72,30 +72,24 @@ body {
   gap: 0.75rem;
   text-decoration: none;
   color: var(--white);
+  background: rgba(255,255,255,0.92);
+  border-radius: 8px;
+  padding: 5px 12px 5px 6px;
 }
 
-.logo-mark svg { display: block; filter: drop-shadow(0 2px 6px rgba(77,184,208,0.4)); }
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
+.logo-img {
+  height: 46px;
+  width: auto;
+  display: block;
 }
 
-.logo-name {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: 0.01em;
-}
-
-.logo-tagline {
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: var(--primary-light);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.footer-logo-img {
+  height: 52px;
+  width: auto;
+  display: block;
+  background: rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 4px;
 }
 
 .nav-links {
@@ -265,23 +259,43 @@ body {
 
 /* ---- PAGE HERO (inner pages) ---- */
 .page-hero {
-  background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
-  padding: calc(var(--navbar-h) + 3rem) 0 4rem;
+  position: relative;
+  padding: calc(var(--navbar-h) + 3.5rem) 0 5rem;
   text-align: center;
   color: var(--white);
-  position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
+/* Dark overlay on top of the photo */
 .page-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 60%, rgba(77,184,208,0.15) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 30%, rgba(249,199,79,0.08) 0%, transparent 50%);
+  background: linear-gradient(
+    135deg,
+    rgba(7, 30, 39, 0.80) 0%,
+    rgba(29, 92, 110, 0.65) 50%,
+    rgba(7, 30, 39, 0.75) 100%
+  );
+  z-index: 0;
 }
 
-.page-hero .container { position: relative; }
+/* Subtle glow accent */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 80%, rgba(249,199,79,0.08) 0%, transparent 60%);
+  z-index: 0;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
 
 .page-hero-tag {
   display: inline-block;
@@ -289,8 +303,12 @@ body {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--primary-light);
-  margin-bottom: 1rem;
+  color: var(--gold);
+  background: rgba(249,199,79,0.12);
+  border: 1px solid rgba(249,199,79,0.3);
+  padding: 0.35rem 1.1rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
 }
 
 .page-hero h1 {
@@ -299,15 +317,52 @@ body {
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 1rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.page-hero h1 em {
+  font-style: italic;
+  color: var(--gold);
 }
 
 .page-hero p {
   font-size: 1.1rem;
-  color: rgba(255,255,255,0.75);
-  max-width: 540px;
+  color: rgba(255,255,255,0.82);
+  max-width: 560px;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.75;
 }
+
+/* ---- PHOTO SECTION BANNERS (mid-page) ---- */
+.photo-banner {
+  position: relative;
+  padding: 4rem 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.photo-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(7,30,39,0.82) 0%, rgba(29,92,110,0.68) 100%);
+}
+
+.photo-banner .container { position: relative; z-index: 1; }
+
+.photo-banner .section-header { margin-bottom: 2rem; }
+
+.photo-banner .section-tag {
+  color: var(--gold);
+  background: rgba(249,199,79,0.12);
+  border: 1px solid rgba(249,199,79,0.3);
+}
+
+.photo-banner .section-header h2 { color: var(--white); }
+
+.photo-banner .section-header p { color: rgba(255,255,255,0.78); }
 
 /* ---- FOOTER ---- */
 .footer {

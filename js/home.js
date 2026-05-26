@@ -1,7 +1,8 @@
 // ============================================================
-// BEACON OF HOPE — Home JS (stat counter)
+// BEACON OF HOPE — Home JS
 // ============================================================
 
+// Stat counter animation
 (function () {
   const counters = document.querySelectorAll('.stat-num[data-target]');
   if (!counters.length) return;
@@ -35,4 +36,23 @@
   }, { threshold: 0.5 });
 
   counters.forEach(c => observer.observe(c));
+})();
+
+// Hero background chooser
+(function () {
+  const btns = document.querySelectorAll('.chooser-btn');
+  const bgs = document.querySelectorAll('.hero-bg-img');
+  if (!btns.length || !bgs.length) return;
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.dataset.bg, 10);
+
+      // Update backgrounds
+      bgs.forEach((bg, i) => bg.classList.toggle('active', i === idx));
+
+      // Update buttons
+      btns.forEach((b, i) => b.classList.toggle('active', i === idx));
+    });
+  });
 })();

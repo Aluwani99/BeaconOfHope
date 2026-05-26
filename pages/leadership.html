@@ -11,24 +11,7 @@
 
   <nav class="navbar scrolled" id="navbar">
     <a href="../index.html" class="nav-logo">
-      <div class="logo-mark">
-        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
-          <rect x="36" y="52" width="8" height="18" fill="#1a3a4a"/>
-          <ellipse cx="40" cy="70" rx="18" ry="4" fill="#1a3a4a" opacity="0.3"/>
-          <circle cx="40" cy="30" r="20" fill="#1d5c6e"/>
-          <circle cx="25" cy="38" r="13" fill="#1d5c6e"/>
-          <circle cx="55" cy="38" r="13" fill="#1d5c6e"/>
-          <circle cx="30" cy="22" r="11" fill="#2a7a90"/>
-          <circle cx="50" cy="22" r="11" fill="#2a7a90"/>
-          <circle cx="40" cy="16" r="12" fill="#2a7a90"/>
-          <circle cx="35" cy="20" r="3" fill="#4db8d0" opacity="0.7"/>
-          <circle cx="48" cy="28" r="2.5" fill="#4db8d0" opacity="0.7"/>
-        </svg>
-      </div>
-      <div class="logo-text">
-        <span class="logo-name">Beacon of Hope</span>
-        <span class="logo-tagline">We Care, We Love</span>
-      </div>
+      <img src="../images/BeaconLogo.png" alt="Beacon of Hope Logo" class="logo-img" />
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -37,13 +20,14 @@
       <li><a href="../index.html" class="nav-link">Home</a></li>
       <li><a href="about.html" class="nav-link">About Us</a></li>
       <li><a href="vision.html" class="nav-link">Vision &amp; Mission</a></li>
-      <li><a href="leadership.html" class="nav-link active">Leadership</a></li>
+      <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+      <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
       <li><a href="contact.html" class="nav-link">Contact</a></li>
       <li><a href="donate.html" class="nav-link nav-donate">Donate</a></li>
     </ul>
   </nav>
 
-  <section class="page-hero">
+  <section class="page-hero" style="background-image:url('../images/education.jpeg');">
     <div class="container">
       <span class="page-hero-tag">Our Team</span>
       <h1>The People Behind<br/><em>the Beacon</em></h1>
@@ -83,11 +67,22 @@
       </div>
 
       <!-- Board -->
-      <div class="section-header" style="margin-top:4rem;">
+    </div>
+  </section>
+
+  <!-- PHOTO BANNER: Board -->
+  <section class="photo-banner" style="background-image:url('../images/education-program.jpg');">
+    <div class="container">
+      <div class="section-header">
         <span class="section-tag">Board &amp; Caregivers</span>
         <h2>Our Dedicated Volunteers</h2>
         <p>Each caregiver and board member plays a vital role in delivering hope to the children and families we serve.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="section leaders-section" style="padding-top:3rem;">
+    <div class="container">
 
       <div class="leaders-grid">
         <div class="leader-card">
@@ -174,15 +169,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-logo">
-        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-          <rect x="36" y="52" width="8" height="18" fill="#4db8d0"/>
-          <circle cx="40" cy="30" r="20" fill="#1d5c6e"/>
-          <circle cx="25" cy="38" r="13" fill="#1d5c6e"/>
-          <circle cx="55" cy="38" r="13" fill="#1d5c6e"/>
-          <circle cx="30" cy="22" r="11" fill="#2a7a90"/>
-          <circle cx="50" cy="22" r="11" fill="#2a7a90"/>
-          <circle cx="40" cy="16" r="12" fill="#2a7a90"/>
-        </svg>
+        <img src="../images/BeaconLogo.png" alt="Beacon of Hope" class="footer-logo-img" />
         <div>
           <span class="footer-name">Beacon of Hope</span>
           <span class="footer-npo">NPO 307-989</span>
@@ -193,10 +180,12 @@
         <a href="about.html">About Us</a>
         <a href="vision.html">Vision &amp; Mission</a>
         <a href="leadership.html">Leadership</a>
+        <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
         <a href="donate.html">Donate</a>
       </nav>
-      <p class="footer-copy">&copy; 2026 Beacon of Hope. Registered NPO. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 Beacon of Hope. Registered NPO. All rights reserved. Designed by Aluwani Rambau - <a href="https://www.github.com/aluwani99" target="_blank">aluwani99</a></p>
+      
     </div>
   </footer>
 
